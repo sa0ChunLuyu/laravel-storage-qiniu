@@ -1,9 +1,9 @@
 {
   "name": "sa0chunluyu/laravel-storage-qiniu",
   "type": "library",
-  "description": "A storage library for laravel8 and qiniu sdk",
+  "description": "A storage library for laravel5 and qiniu sdk",
   "keywords": [
-    "laravel8",
+    "laravel5",
     "qiniu",
     "storage",
     "sdk",
@@ -28,10 +28,6 @@
       "email": "popfeng@yeah.net",
       "role": "Developer",
       "homepage": "http://github.com/popfeng"
-    },
-    {
-      "name": "sa0chunluyu",
-      "email": "sa0chun_luyu@aliyun.com"
     }
   ],
   "require": {

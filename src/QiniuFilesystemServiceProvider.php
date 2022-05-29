@@ -1,6 +1,4 @@
-<?php
-
-namespace sa0chunluyu\QiniuStorage;
+<?php namespace sa0chunluyu\QiniuStorage;
 
 use League\Flysystem\Filesystem;
 use Illuminate\Support\ServiceProvider;

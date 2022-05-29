@@ -1,37 +1,15 @@
-## sa0ChunLuyu May 29 2022
-
-解决了在执行删除操作时候的报错
-
-```php
-Storage::disk('qiniu')->delete($path);
-
-// qiniu-laravel-storage\src\QiniuAdapter.php
-// 第339行左右
-
-$error = $bucketMgr->delete($this->bucket, $path);
-
-// 替换为
-
-list ($ret, $error) = $bucketMgr->delete ($this->bucket, $path);
-```
-
-# 不再维护
-
-尝试在用这个的同学注意了，建议直接 composer require qiniu/php-sdk 即可，自己再对需要的封装一下，更灵活。
-
-
-## Laravel5 七牛存储组件
+# Laravel5 七牛存储组件（使用官方SDK）
 
 对七牛官方组件再次封装，以简化在 Laravel 中的使用成本。
 
 ## 注意
 
- 最初找到了原作者的项目，使用 composer 安装完，发现完全不对。所以变更了代码，以便可以通过 composer 的方式引入该组件和七牛组件，鉴于有同学也在用这个，因此保留该项目至今，基本不开发新功能，接受 pr。想看原作者项目的请去 https://github.com/zgldh/qiniu-laravel-storage
+ 最初找到了原作者的项目，使用 composer 安装完，发现完全不对。所以变更了代码，以便可以通过 composer 的方式引入该组件和七牛组件，鉴于有同学也在用这个，而且原项目做的某些变更我不认同，因此保留该项目至今，基本不开发新功能，接受 pr。想看原作者项目的请去 https://github.com/zgldh/qiniu-laravel-storage
 
 
 ## 安装
 
- - ```composer require itbdw/laravel-storage-qiniu```
+ - ```composer require sa0chunluyu/laravel-storage-qiniu```
  - ```config/app.php``` 里面的 ```providers``` 数组， 加上一行 ```sa0chunluyu\QiniuStorage\QiniuFilesystemServiceProvider```
  - ```config/filesystem.php``` 里面的 ```disks```数组加上：
  
