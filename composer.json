@@ -28,6 +28,10 @@
       "email": "popfeng@yeah.net",
       "role": "Developer",
       "homepage": "http://github.com/popfeng"
+    },
+    {
+      "name": "sa0chunluyu",
+      "email": "sa0chun_luyu@aliyun.com"
     }
   ],
   "require": {
@@ -36,7 +40,7 @@
   },
   "autoload": {
     "psr-4": {
-      "itbdw\\QiniuStorage\\": "src/"
+      "sa0chunluyu\\QiniuStorage\\": "src/"
     }
   }
 }

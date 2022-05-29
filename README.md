@@ -1,3 +1,20 @@
+## sa0ChunLuyu May 29 2022
+
+解决了在执行删除操作时候的报错
+
+```php
+Storage::disk('qiniu')->delete($path);
+
+// qiniu-laravel-storage\src\QiniuAdapter.php
+// 第339行左右
+
+$error = $bucketMgr->delete($this->bucket, $path);
+
+// 替换为
+
+list ($ret, $error) = $bucketMgr->delete ($this->bucket, $path);
+```
+
 # 不再维护
 
 尝试在用这个的同学注意了，建议直接 composer require qiniu/php-sdk 即可，自己再对需要的封装一下，更灵活。
