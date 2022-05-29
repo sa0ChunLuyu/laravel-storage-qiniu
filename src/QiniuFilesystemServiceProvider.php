@@ -1,21 +1,23 @@
-<?php namespace itbdw\QiniuStorage;
+<?php
+
+namespace sa0chunluyu\QiniuStorage;
 
 use League\Flysystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
-use itbdw\QiniuStorage\Plugins\DownloadUrl;
-use itbdw\QiniuStorage\Plugins\ImageExif;
-use itbdw\QiniuStorage\Plugins\ImageInfo;
-use itbdw\QiniuStorage\Plugins\ImagePreviewUrl;
-use itbdw\QiniuStorage\Plugins\PersistentFop;
-use itbdw\QiniuStorage\Plugins\PersistentStatus;
-use itbdw\QiniuStorage\Plugins\PrivateDownloadUrl;
-use itbdw\QiniuStorage\Plugins\UploadToken;
-use itbdw\QiniuStorage\Plugins\Fetch;
-use itbdw\QiniuStorage\Plugins\PutFile;
+use sa0chunluyu\QiniuStorage\Plugins\DownloadUrl;
+use sa0chunluyu\QiniuStorage\Plugins\ImageExif;
+use sa0chunluyu\QiniuStorage\Plugins\ImageInfo;
+use sa0chunluyu\QiniuStorage\Plugins\ImagePreviewUrl;
+use sa0chunluyu\QiniuStorage\Plugins\PersistentFop;
+use sa0chunluyu\QiniuStorage\Plugins\PersistentStatus;
+use sa0chunluyu\QiniuStorage\Plugins\PrivateDownloadUrl;
+use sa0chunluyu\QiniuStorage\Plugins\UploadToken;
+use sa0chunluyu\QiniuStorage\Plugins\Fetch;
+use sa0chunluyu\QiniuStorage\Plugins\PutFile;
 
 /**
  * Class QiniuFilesystemServiceProvider
- * @package itbdw\QiniuStorage
+ * @package sa0chunluyu\QiniuStorage
  */
 class QiniuFilesystemServiceProvider extends ServiceProvider
 {

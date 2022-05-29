@@ -32,7 +32,7 @@ list ($ret, $error) = $bucketMgr->delete ($this->bucket, $path);
 ## 安装
 
  - ```composer require itbdw/laravel-storage-qiniu```
- - ```config/app.php``` 里面的 ```providers``` 数组， 加上一行 ```itbdw\QiniuStorage\QiniuFilesystemServiceProvider```
+ - ```config/app.php``` 里面的 ```providers``` 数组， 加上一行 ```sa0chunluyu\QiniuStorage\QiniuFilesystemServiceProvider```
  - ```config/filesystem.php``` 里面的 ```disks```数组加上：
  
 ```php
@@ -108,7 +108,7 @@ list ($ret, $error) = $bucketMgr->delete ($this->bucket, $path);
 
 ```php
 
-    use itbdw\QiniuStorage\QiniuStorage;
+    use sa0chunluyu\QiniuStorage\QiniuStorage;
 
     $disk = QiniuStorage::disk('qiniu');
     $disk->exists('file.jpg');                      //文件是否存在
