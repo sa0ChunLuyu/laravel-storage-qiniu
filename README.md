@@ -1,4 +1,9 @@
-# sa0ChunLuyu May 29 2022
+# Laravel5 七牛存储组件（使用官方SDK）
+
+对七牛官方组件再次封装，以简化在 Laravel 中的使用成本。
+
+
+## sa0ChunLuyu May 29 2022
 解决了在执行删除操作时候的报错
 
 ```php
@@ -13,10 +18,6 @@ $error = $bucketMgr->delete($this->bucket, $path);
 
 list ($ret, $error) = $bucketMgr->delete ($this->bucket, $path);
 ```
-
-# Laravel5 七牛存储组件（使用官方SDK）
-
-对七牛官方组件再次封装，以简化在 Laravel 中的使用成本。
 
 ## 注意
 

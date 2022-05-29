@@ -83,7 +83,7 @@ class QiniuAdapter extends AbstractAdapter
         $notLogCode = [612];
 
         if (!in_array($error->code(), $notLogCode)) {
-            \Log::error('Qiniu: ' . $error->code() . ' ' .  $error->message());
+            \Log::error('Qiniu: ' . $error->code() . ' ' . $error->message());
         }
     }
 
@@ -92,7 +92,7 @@ class QiniuAdapter extends AbstractAdapter
      *
      * @param string $path
      * @param string $contents
-     * @param Config $config   Config object
+     * @param Config $config Config object
      * @param bool $isPutFile
      *
      * @return array|false false on failure file meta data on success
@@ -108,9 +108,9 @@ class QiniuAdapter extends AbstractAdapter
         $upload_manager = $this->getUploadManager();
 
         if ($isPutFile) {
-        	list($ret, $error) = $upload_manager->putFile($token, $path, $contents, $params, $mime, $checkCrc);
+            list($ret, $error) = $upload_manager->putFile($token, $path, $contents, $params, $mime, $checkCrc);
         } else {
-        	list($ret, $error) = $upload_manager->put($token, $path, $contents, $params, $mime, $checkCrc);
+            list($ret, $error) = $upload_manager->put($token, $path, $contents, $params, $mime, $checkCrc);
         }
 
         if ($error !== null) {
@@ -127,7 +127,7 @@ class QiniuAdapter extends AbstractAdapter
      *
      * @param string $path
      * @param string $contents
-     * @param Config $config   Config object
+     * @param Config $config Config object
      *
      * @return array|false false on failure file meta data on success
      */
@@ -191,7 +191,7 @@ class QiniuAdapter extends AbstractAdapter
     {
         $bucketMgr = $this->getBucketManager();
 
-        $error = $bucketMgr->delete($this->bucket, $path);
+        list ($ret, $error) = $bucketMgr->delete($this->bucket, $path);
         if ($error !== null) {
             $this->logQiniuError($error);
 
@@ -286,7 +286,7 @@ class QiniuAdapter extends AbstractAdapter
      * List contents of a directory.
      *
      * @param string $directory
-     * @param bool   $recursive
+     * @param bool $recursive
      *
      * @return array
      */
@@ -401,8 +401,8 @@ class QiniuAdapter extends AbstractAdapter
     }
 
     public function persistentFop($path = null, $fops = null)
-    {        
-        
+    {
+
         $auth = $this->getAuth();
 
         $pfop = new PersistentFop($auth);
@@ -420,7 +420,7 @@ class QiniuAdapter extends AbstractAdapter
     }
 
     public function persistentStatus($id)
-    {        
+    {
         $auth = $this->getAuth();
 
         $pfop = new PersistentFop($auth);
@@ -478,7 +478,8 @@ class QiniuAdapter extends AbstractAdapter
         $expires = 3600,
         $policy = null,
         $strictPolicy = true
-    ) {
+    )
+    {
         $auth = $this->getAuth();
 
         $token = $auth->uploadToken(
