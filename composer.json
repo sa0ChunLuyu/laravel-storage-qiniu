@@ -1,9 +1,9 @@
 {
   "name": "sa0chunluyu/laravel-storage-qiniu",
   "type": "library",
-  "description": "A storage library for laravel5 and qiniu sdk",
+  "description": "A storage library for laravel8 and qiniu sdk",
   "keywords": [
-    "laravel5",
+    "laravel8",
     "qiniu",
     "storage",
     "sdk",
