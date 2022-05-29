@@ -1,5 +1,5 @@
 {
-  "name": "itbdw/laravel-storage-qiniu",
+  "name": "sa0chunluyu/laravel-storage-qiniu",
   "type": "library",
   "description": "A storage library for laravel5 and qiniu sdk",
   "keywords": [
